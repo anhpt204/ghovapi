@@ -63,7 +63,7 @@ var CVRPOutputMedia = MediaType("application/cvrp.solution", func() {
 	})
 
 	View("default", func() {
-		Attribute("tours")
+		Attribute("tours", "duration")
 	})
 })
 
