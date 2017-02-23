@@ -39,7 +39,7 @@ var VRPTour = Type("VRPTour", func() {
 	Description("Tour")
 	Attribute("depot", VRPDepotPayload, "depot")
 	Attribute("nodes", ArrayOf(VRPRouteNode), "danh sach cac order duoc phuc vu")
-	// Attribute("duration", Number, "Total duration")
+	Attribute("duration", Number, "Tour duration")
 })
 
 var CVRPInputPayload = Type("CVRPInputPayload", func() {
@@ -59,6 +59,7 @@ var CVRPOutputMedia = MediaType("application/cvrp.solution", func() {
 	ContentType("application/json")
 	Attributes(func() {
 		Attribute("tours", ArrayOf(VRPTour), "List of routes")
+		Attribute("duration", Number, "Solution duration")
 	})
 
 	View("default", func() {
