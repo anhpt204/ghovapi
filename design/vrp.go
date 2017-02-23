@@ -47,14 +47,14 @@ var CVRPInputPayload = Type("CVRPInputPayload", func() {
 	Attribute("session_key", String, "public key")
 	Attribute("depot", VRPDepotPayload, "depot")
 	Attribute("requests", ArrayOf(VRPOrderPayload), "requests")
-	Attribute("loadbalancing", Boolean, "So order moi xe gan bang nhau")
+	Attribute("orderbalancing", Boolean, "So order moi xe gan bang nhau")
 	Attribute("maxnodesperroute", Integer, "Maximum number of nodes each route")
 	Attribute("maxroutelength", Number, "Maximum route length")
 	Attribute("submittime", Integer, "Submited datetime in for of epoch")
 
 })
 
-var CVRPOutputMedia = MediaType("application/cvrp.solver", func() {
+var CVRPOutputMedia = MediaType("application/cvrp.solution", func() {
 	Description("Solution for cvrp")
 	ContentType("application/json")
 	Attributes(func() {
